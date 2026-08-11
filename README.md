@@ -1,8 +1,8 @@
-# Spiking Brain Tumor Segmentation
+# Spiking U-seg Net for Brain Tumor Segmentation
 
 Reliable energy-efficient spiking neural network for brain tumor segmentation.
 
-This repository contains the code for the paper [Reliable Brain Tumor Segmentation Based on Spiking Neural Networks with Efficient Training](https://ieeexplore.ieee.org/document/11516057/metrics#metrics). The proposed method uses Forward Propagation Through Time (FPTT) to keep temporal learning efficient while reducing the computational cost of training spiking neural networks for semantic image segmentation.
+This repository contains the code for the paper [Reliable Brain Tumor Segmentation Based on Spiking Neural Networks with Efficient Training](https://ieeexplore.ieee.org/document/11516057/metrics#metrics). The proposed method, referred to here as the **Spiking U-seg Net**, uses Forward Propagation Through Time (FPTT) to keep temporal learning efficient while reducing the computational cost of training spiking neural networks for semantic image segmentation.
 
 ## Installation
 
@@ -35,18 +35,17 @@ The configuration file [experiments_snn_fptt.yaml](experiments_snn_fptt.yaml) co
 
 ## Architecture
 
-The model is a spiking U-Net style network built from convolutional and deconvolutional blocks with PLIF neurons and surrogate gradients. It processes multimodal MRI inputs slice by slice, aggregates temporal information with FPTT, and produces voxel-wise tumor segmentation outputs.
+The Spiking U-seg Net is a spiking U-Net style network built from convolutional and deconvolutional blocks with PLIF neurons and surrogate gradients. It processes multimodal MRI inputs slice by slice, aggregates temporal information with FPTT, and produces voxel-wise tumor segmentation outputs.
 
 Main components:
 
 - `ConvBlock`: convolution, normalization, and spiking activation.
-- `DeconvBlock`: transposed convolution block for decoding.
+- `DeconvBlock`: transposed convolution block for decoding, also followed by spiking activation.
 - `SNNBraTS`, `SNNBraTSUNetShallow`, `SNNBraTSUNetMedium`, `SNNBraTSUNetDeep`: model variants with different encoder-decoder depths.
 
 <div align="center">
 
-<!-- Insert architecture figure here -->
-**Architecture figure placeholder**
+![Spiking U-seg Net architecture](images/model.png)
 
 </div>
 
