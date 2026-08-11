@@ -1,0 +1,22 @@
+name: brats23_sagittal_fold1
+data_root: null
+val_fold: 1
+view: sagittal
+model: orig
+batch_size_subjects: 8
+lr: 0.001
+epochs: 120
+weight_decay: 0.00001
+grad_clip: 0.3
+tbptt_k: 1
+alpha_fptt: 0.1
+beta_fptt: 0.15
+rho_fptt: 0.0
+lambda_fptt: 1.5
+lambda_bce: 0.5
+lambda_dice: 0.5
+eval_every: 1
+eval_batch_slices: 16
+prob_threshold: 0.5
+subjects_per_fold: null  # null/commented = use all subjects; otherwise first n per train/val fold
+# overfit_subjects: 5

@@ -1,0 +1,24 @@
+[project]
+name = "spiking-brain-tumor-segmentation"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "auryghia", email = "auryghia05@gmail.com" }]
+requires-python = ">=3.9"
+dependencies = [
+    "accelerate>=1.10,<2",
+    "mamba-ssm; sys_platform == 'linux' and platform_machine == 'x86_64'",
+    "nibabel>=5.3.3",
+    "numpy>=2.0.2",
+    "pillow>=11.3.0",
+    "pyyaml>=6.0.3",
+    "scikit-learn>=1.6.1",
+    "torch==2.5.1",
+    "torchinfo>=1.8.0",
+    "torchmetrics>=1.8.2",
+    "torchvision>=0.20.1",
+    "tqdm>=4.70.0",
+]
+
+[tool.uv]
+required-environments = ["sys_platform == 'win32' and platform_machine == 'AMD64'"]
