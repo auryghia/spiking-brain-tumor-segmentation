@@ -45,7 +45,7 @@ Main components:
 
 <div align="center">
 
-![Spiking U-seg Net architecture](images/model.png)
+![Spiking U-seg Net architecture](figures/model.png)
 
 </div>
 
