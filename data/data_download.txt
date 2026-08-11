@@ -1,0 +1,2 @@
+BraTS17: https://www.kaggle.com/datasets/abdullahalmunem/brats17?resource=download
+BraTS23: https://www.synapse.org/Synapse:syn51514132 
